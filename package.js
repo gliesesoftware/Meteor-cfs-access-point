@@ -1,8 +1,8 @@
 Package.describe({
-  name: 'cfs:access-point',
-  version: '0.1.43',
-  summary: 'CollectionFS, add ddp and http accesspoint capability',
-  git: 'https://github.com/CollectionFS/Meteor-cfs-access-point.git'
+  name: 'gliese:cfs-access-point',
+  version: '0.1.44',
+  summary: 'Gliese flavour of CollectionFS, add ddp and http accesspoints (INTERNAL USE ONLY)',
+  git: 'https://github.com/gliesesoftware/cfs-access-point.git'
 });
 
 Package.onUse(function(api) {
@@ -10,13 +10,13 @@ Package.onUse(function(api) {
 
   // This imply is needed for tests, and is technically probably correct anyway.
   api.imply([
-    'cfs:base-package'
+    'gliese:cfs-base'
   ]);
 
   api.use([
     //CFS packages
-    'cfs:base-package@0.0.27',
-    'cfs:file@0.1.15',
+    'gliese:cfs-base@0.0.28',
+    'gliese:cfs-file@0.1.16',
     //Core packages
     'check',
     'ejson',
@@ -42,9 +42,9 @@ Package.onTest(function (api) {
 
   api.use([
     //CFS packages
-    'cfs:access-point',
-    'cfs:standard-packages@0.0.2',
-    'cfs:gridfs@0.0.0',
+    'gliese:cfs-access-point',
+    'gliese:cfs-core@0.0.2',
+    'gliese:cfs-gridfs@0.0.0',
     //Core packages
     'test-helpers',
     'http',
